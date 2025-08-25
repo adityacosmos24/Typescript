@@ -85,4 +85,70 @@ Difference between `type` and `interface` in TypeScript:
 7. Convention:
    - Use `interface` for object structures
    - Use `type` for unions, primitives, and complex compositions
+
+
+
+
+
+
+
+
+   Interfaces can be implemented with classes
 */
+
+//interfaces vs abstract
+// in case of abstract class we can give default implementation as well and interface cannot 
+/*
+    // -------------------- INTERFACE --------------------
+// Interfaces in TypeScript can only define "contracts"
+// They cannot provide default implementations of methods
+interface Vehicle {
+    start(): void;   // must be implemented
+    stop(): void;    // must be implemented
+}
+
+// Example: Any class implementing Vehicle must define both start() and stop()
+class Car implements Vehicle {
+    start(): void {
+        console.log("Car started!");
+    }
+    stop(): void {
+        console.log("Car stopped!");
+    }
+}
+
+
+
+// -------------------- ABSTRACT CLASS --------------------
+// Abstract classes can define abstract methods (must be implemented by child)
+// AND also provide default implementations of some methods
+abstract class Machine {
+    // Abstract method -> child classes MUST implement this
+    abstract start(): void;
+
+    // Default implementation -> child classes can override or use as is
+    stop(): void {
+        console.log("Machine stopped (default implementation).");
+    }
+}
+
+// Example: WashingMachine implements Machine
+class WashingMachine extends Machine {
+    start(): void {
+        console.log("Washing Machine started!");
+    }
+    // stop() is optional to override because a default exists in abstract class
+}
+
+
+
+// -------------------- USAGE --------------------
+let myCar = new Car();
+myCar.start(); // Car started!
+myCar.stop();  // Car stopped!
+
+let wm = new WashingMachine();
+wm.start();    // Washing Machine started!
+wm.stop();     // Machine stopped (default implementation).
+
+ */

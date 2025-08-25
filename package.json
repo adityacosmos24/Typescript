@@ -6,7 +6,10 @@
     "build": "tsc -b",
     "startinter_types": "node dist/interfacesandtypes.js",
     "startindex": "node dist/index.js",
-    "startgreeting":"node dist/greeting.js"
+    "startgreeting":"node dist/greeting.js",
+    "startinterfaces":"node dist/interfaces.js",
+    "starttypes":"node dist/types.js",
+    "startarrays":"node dist/arrays.js"
   },
   "keywords": [],
   "author": "",
